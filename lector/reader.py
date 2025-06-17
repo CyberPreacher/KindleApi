@@ -291,7 +291,7 @@ class _KindleCloudReaderBrowser(PhantomJS):
     These modules provide the interface used to execute API queries.
     """
     # Wait for the Module Manager to load
-    mod_mgr_script = ur"return window.hasOwnProperty('KindleModuleManager');"
+    mod_mgr_script = r"return window.hasOwnProperty('KindleModuleManager');"
     mod_mgr_loaded = lambda br: br.execute_script(mod_mgr_script)
     self._wait(5).until(mod_mgr_loaded)
 
