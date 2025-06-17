@@ -296,7 +296,7 @@ class _KindleCloudReaderBrowser(PhantomJS):
     self._wait(5).until(mod_mgr_loaded)
 
     # Wait for the DB Client to load
-    db_client_script = dedent(ur"""
+    db_client_script = dedent(r"""
         var done = arguments[0];
         if (!window.hasOwnProperty('KindleModuleManager') ||
             !KindleModuleManager
